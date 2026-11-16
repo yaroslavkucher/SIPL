@@ -1,0 +1,4 @@
+// expect: E002 3:15 умова без оператора порівняння
+begin
+  while X + 1 do skip
+end

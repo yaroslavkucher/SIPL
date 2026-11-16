@@ -1,0 +1,66 @@
+// SIPL (SImple Programming Language) - формальна граматика, версія 1.0.
+//
+// Формат: Lark (https://lark-parser.readthedocs.io), придатна для parser="lalr".
+// Граматика описує ту саму мову, що й БНФ курсу (docs/grammar.md), але
+// неоднозначність БНФ знято пріоритетами:
+//   *  сильніше за  + -      (усі лівоасоціативні)
+//   not  сильніше за  or
+//   ;  найслабша: тіло while та гілки if - один оператор (simple_statement)
+//
+// Еталонна реалізація - src/sipl/parser.py; тест tests/test_grammar.py
+// перевіряє, що ця граматика та парсер приймають і відхиляють одні й ті самі
+// програми з examples/ та examples/invalid/.
+
+start: program
+
+program: "begin" statement "end"
+
+// <оператор> ::= <оператор> ; <оператор>
+?statement: statement ";" simple_statement   -> seq
+          | simple_statement
+
+?simple_statement: variable ":=" expression                                    -> assign
+                 | "if" condition "then" simple_statement "else" simple_statement -> if_
+                 | "while" condition "do" simple_statement                     -> while_
+                 | "begin" statement "end"                                     -> block
+                 | "skip"                                                      -> skip
+
+// <вираз> ::= <число> | <змінна> | <вираз> + <вираз> | <вираз> - <вираз>
+//           | <вираз> * <вираз> | ( <вираз> )
+?expression: expression "+" term   -> add
+           | expression "-" term   -> sub
+           | term
+
+?term: term MUL factor             -> mult
+     | factor
+
+?factor: number
+       | variable
+       | "(" expression ")"
+
+// <умова> ::= <вираз> = <вираз> | <вираз> > <вираз> | <умова> ∨ <умова>
+//           | ¬ <умова> | ( <умова> )
+?condition: condition OR negation  -> or_
+          | negation
+
+?negation: NOT negation            -> neg
+         | expression "=" expression -> eq
+         | expression ">" expression -> gr
+         | "(" condition ")"
+
+variable: IDENT
+number: NUMBER | "-" NUMBER
+
+// --- лексика ---------------------------------------------------------------
+// Зарезервовані слова: begin end if then else while do skip or not,
+// а також and true false (зайняті мовою тверджень асистента доведення).
+IDENT: /(?!(?:begin|end|if|then|else|while|do|skip|or|not|and|true|false)\b)[A-Za-z_][A-Za-z0-9_]*/
+NUMBER: /[0-9]+(?![A-Za-z_])/
+OR: "or" | "∨"
+NOT: "not" | "¬"
+MUL: "*" | "·" | "×"
+
+COMMENT: /\/\/[^\n]*/
+WS: /[ \t\r\n﻿]+/
+%ignore COMMENT
+%ignore WS

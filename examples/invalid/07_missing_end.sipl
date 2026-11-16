@@ -1,0 +1,4 @@
+// expect: E002 5:1 блок не закрито
+begin
+  while X > 0 do
+    begin X := X - 1

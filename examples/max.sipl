@@ -1,0 +1,8 @@
+// Максимум двох чисел (програма без циклів)
+//@ post: (M = X or M = Y) and M >= X and M >= Y
+begin
+  if X > Y then
+    M := X
+  else
+    M := Y
+end

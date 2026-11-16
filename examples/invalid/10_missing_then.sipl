@@ -1,0 +1,4 @@
+// expect: E002 3:12 пропущено then
+begin
+  if X > 0 Y := 1 else skip
+end

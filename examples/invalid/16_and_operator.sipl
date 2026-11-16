@@ -1,0 +1,4 @@
+// expect: E003 3:12 зв'язка and не входить до SIPL
+begin
+  if X > 0 and Y > 0 then skip else skip
+end

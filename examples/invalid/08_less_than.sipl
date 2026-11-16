@@ -1,0 +1,4 @@
+// expect: E003 3:11 оператор < не входить до SIPL
+begin
+  while X < 10 do X := X + 1
+end

@@ -1,0 +1,14 @@
+// Сума 1 + 2 + ... + N
+//@ pre: N >= 0
+//@ post: 2 * S = N * (N + 1)
+begin
+  S := 0;
+  I := 0;
+  //@ inv: 2 * S = I * (I + 1) and N >= I
+  //@ variant: N - I
+  while N > I do
+  begin
+    I := I + 1;
+    S := S + I
+  end
+end

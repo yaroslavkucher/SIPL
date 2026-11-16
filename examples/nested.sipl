@@ -1,0 +1,21 @@
+// Вкладені цикли: P = A * B через додавання одиниць
+//@ pre: A >= 0 and B >= 0
+//@ post: P = A * B
+begin
+  P := 0;
+  I := 0;
+  //@ inv: P = I * B and A >= I and B >= 0
+  //@ variant: A - I
+  while A > I do
+  begin
+    J := 0;
+    //@ inv: P = I * B + J and B >= J and A > I
+    //@ variant: B - J
+    while B > J do
+    begin
+      P := P + 1;
+      J := J + 1
+    end;
+    I := I + 1
+  end
+end

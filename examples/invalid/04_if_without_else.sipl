@@ -1,0 +1,4 @@
+// expect: E002 4:1 гілка else обов'язкова
+begin
+  if X > 0 then Y := 1
+end

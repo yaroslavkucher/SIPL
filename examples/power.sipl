@@ -1,0 +1,13 @@
+// Піднесення до степеня: R = A ^ B
+//@ pre: Y >= 0 and X = A and Y = B
+//@ post: R = A^B
+begin
+  R := 1;
+  //@ inv: R * X^Y = A^B and Y >= 0
+  //@ variant: Y
+  while Y > 0 do
+  begin
+    R := R * X;
+    Y := Y - 1
+  end
+end

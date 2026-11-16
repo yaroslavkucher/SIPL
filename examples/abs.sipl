@@ -1,0 +1,5 @@
+// Модуль числа
+//@ post: R >= 0 and (R = X or R = 0 - X)
+begin
+  if X > 0 then R := X else R := 0 - X
+end

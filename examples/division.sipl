@@ -1,0 +1,14 @@
+// Ділення з остачею відніманням: A = Q * B + R, 0 <= R < B
+//@ pre: A >= 0 and B > 0
+//@ post: A = Q * B + R and R >= 0 and R < B
+begin
+  Q := 0;
+  R := A;
+  //@ inv: A = Q * B + R and R >= 0 and B > 0
+  //@ variant: R
+  while R > B or R = B do
+  begin
+    R := R - B;
+    Q := Q + 1
+  end
+end

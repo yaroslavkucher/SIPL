@@ -1,0 +1,8 @@
+// Обмін значень без третьої змінної
+//@ pre: X = A and Y = B
+//@ post: X = B and Y = A
+begin
+  X := X + Y;
+  Y := X - Y;
+  X := X - Y
+end

@@ -1,0 +1,13 @@
+// Факторіал: F = N!  (обчислюється множенням 1 * 2 * ... * N)
+//@ pre: N >= 0
+begin
+  F := 1;
+  I := 0;
+  //@ inv: N >= I and I >= 0
+  //@ variant: N - I
+  while N > I do
+  begin
+    I := I + 1;
+    F := F * I
+  end
+end

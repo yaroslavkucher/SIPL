@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SIPL: дерево виводу та AST</title><style>
+:root{color-scheme:light}
+body{margin:0;font:14px/1.5 system-ui,'Segoe UI',sans-serif;background:#f5f6f9;color:#1c2333}
+header{padding:12px 20px;background:#1c2333;color:#fff}
+header h1{margin:0;font-size:17px;font-weight:600}
+header p{margin:2px 0 0;font-size:12.5px;color:#c5cbe0}
+main{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:16px;padding:16px 20px}
+@media(max-width:820px){main{grid-template-columns:1fr}}
+section{background:#fff;border:1px solid #d8dce6;border-radius:8px;padding:12px 14px;min-width:0}
+h2{margin:0 0 8px;font-size:14px}
+#src{margin:0;font:13px/1.55 Consolas,'DejaVu Sans Mono',monospace;white-space:pre-wrap;
+position:sticky;top:12px}
+#src span{cursor:pointer}
+#src span.hl{background:#fed7aa}
+.scroll{overflow:auto}
+.trees{display:grid;gap:16px;min-width:0}
+#info{font:12.5px Consolas,monospace;color:#4a5370;min-height:1.5em;margin-top:8px}
+
+.sipl-tree text{font:12px Consolas,'DejaVu Sans Mono',monospace;text-anchor:middle;
+dominant-baseline:central;fill:#1c2333;pointer-events:none}
+.sipl-tree line{stroke:#8a93a6;stroke-width:1.2}
+.sipl-tree rect{stroke:#5b6785;stroke-width:1;rx:6}
+.sipl-tree .nonterminal rect,.sipl-tree .statement rect{fill:#e8eefc}
+.sipl-tree .terminal rect,.sipl-tree .expression rect{fill:#fff4d6}
+.sipl-tree .condition rect{fill:#fbe3e6}
+.sipl-tree .program rect{fill:#dcefe2}
+.sipl-tree .node{cursor:pointer}
+.sipl-tree .node.match rect{stroke:#c2410c;stroke-width:2.5}
+.sipl-tree .node.sel rect{stroke:#c2410c;stroke-width:3;fill:#fed7aa}
+</style></head><body><header><h1>SIPL: дерево виводу та AST</h1><p>Наведіть на вузол, щоб побачити його фрагмент коду; клацніть по коду, щоб знайти відповідні вузли.</p></header><main><section><h2>Вихідний текст</h2><pre id="src"><span>/</span><span>/</span><span> </span><span>М</span><span>а</span><span>к</span><span>с</span><span>и</span><span>м</span><span>у</span><span>м</span><span> </span><span>д</span><span>в</span><span>о</span><span>х</span><span> </span><span>ч</span><span>и</span><span>с</span><span>е</span><span>л</span><span> </span><span>(</span><span>п</span><span>р</span><span>о</span><span>г</span><span>р</span><span>а</span><span>м</span><span>а</span><span> </span><span>б</span><span>е</span><span>з</span><span> </span><span>ц</span><span>и</span><span>к</span><span>л</span><span>і</span><span>в</span><span>)</span><span>
+</span><span>/</span><span>/</span><span>@</span><span> </span><span>p</span><span>o</span><span>s</span><span>t</span><span>:</span><span> </span><span>(</span><span>M</span><span> </span><span>=</span><span> </span><span>X</span><span> </span><span>o</span><span>r</span><span> </span><span>M</span><span> </span><span>=</span><span> </span><span>Y</span><span>)</span><span> </span><span>a</span><span>n</span><span>d</span><span> </span><span>M</span><span> </span><span>&gt;</span><span>=</span><span> </span><span>X</span><span> </span><span>a</span><span>n</span><span>d</span><span> </span><span>M</span><span> </span><span>&gt;</span><span>=</span><span> </span><span>Y</span><span>
+</span><span>b</span><span>e</span><span>g</span><span>i</span><span>n</span><span>
+</span><span> </span><span> </span><span>i</span><span>f</span><span> </span><span>X</span><span> </span><span>&gt;</span><span> </span><span>Y</span><span> </span><span>t</span><span>h</span><span>e</span><span>n</span><span>
+</span><span> </span><span> </span><span> </span><span> </span><span>M</span><span> </span><span>:</span><span>=</span><span> </span><span>X</span><span>
+</span><span> </span><span> </span><span>e</span><span>l</span><span>s</span><span>e</span><span>
+</span><span> </span><span> </span><span> </span><span> </span><span>M</span><span> </span><span>:</span><span>=</span><span> </span><span>Y</span><span>
+</span><span>e</span><span>n</span><span>d</span><span>
+</span></pre><div id="info"></div></section><div class="trees"><section><h2>Дерево синтаксичного виводу</h2><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" class="sipl-tree" data-tree="t0" width="963" height="348" viewBox="0 0 963 348">
+<line x1="481.5" y1="42.0" x2="43.2" y2="74.0"/>
+<line x1="481.5" y1="42.0" x2="488.8" y2="74.0"/>
+<line x1="481.5" y1="42.0" x2="927.1" y2="74.0"/>
+<line x1="488.8" y1="100.0" x2="98.8" y2="132.0"/>
+<line x1="488.8" y1="100.0" x2="230.5" y2="132.0"/>
+<line x1="488.8" y1="100.0" x2="369.5" y2="132.0"/>
+<line x1="488.8" y1="100.0" x2="509.8" y2="132.0"/>
+<line x1="488.8" y1="100.0" x2="650.1" y2="132.0"/>
+<line x1="488.8" y1="100.0" x2="790.4" y2="132.0"/>
+<line x1="230.5" y1="158.0" x2="165.3" y2="190.0"/>
+<line x1="230.5" y1="158.0" x2="230.5" y2="190.0"/>
+<line x1="230.5" y1="158.0" x2="295.7" y2="190.0"/>
+<line x1="165.3" y1="216.0" x2="165.3" y2="248.0"/>
+<line x1="165.3" y1="274.0" x2="165.3" y2="306.0"/>
+<line x1="295.7" y1="216.0" x2="295.7" y2="248.0"/>
+<line x1="295.7" y1="274.0" x2="295.7" y2="306.0"/>
+<line x1="509.8" y1="158.0" x2="443.3" y2="190.0"/>
+<line x1="509.8" y1="158.0" x2="509.8" y2="190.0"/>
+<line x1="509.8" y1="158.0" x2="576.3" y2="190.0"/>
+<line x1="443.3" y1="216.0" x2="443.3" y2="248.0"/>
+<line x1="576.3" y1="216.0" x2="576.3" y2="248.0"/>
+<line x1="576.3" y1="274.0" x2="576.3" y2="306.0"/>
+<line x1="790.4" y1="158.0" x2="723.9" y2="190.0"/>
+<line x1="790.4" y1="158.0" x2="790.4" y2="190.0"/>
+<line x1="790.4" y1="158.0" x2="856.9" y2="190.0"/>
+<line x1="723.9" y1="216.0" x2="723.9" y2="248.0"/>
+<line x1="856.9" y1="216.0" x2="856.9" y2="248.0"/>
+<line x1="856.9" y1="274.0" x2="856.9" y2="306.0"/>
+<g class="node nonterminal" data-id="1" data-start="94" data-end="148"><title>&lt;програма&gt; ::= begin &lt;оператор&gt; end
+3:1-8:4: begin if X &gt; Y then M := X else M := Y end</title><rect x="436.0" y="16.0" width="91.0" height="26"/><text x="481.5" y="29.0">&lt;програма&gt;</text></g>
+<g class="node terminal" data-id="2" data-start="94" data-end="99"><title>лексема begin
+3:1-3:6: begin</title><rect x="16.0" y="74.0" width="54.5" height="26"/><text x="43.2" y="87.0">begin</text></g>
+<g class="node nonterminal" data-id="3" data-start="102" data-end="144"><title>&lt;оператор&gt; ::= if &lt;умова&gt; then &lt;оператор&gt; else &lt;оператор&gt;
+4:3-7:11: if X &gt; Y then M := X else M := Y</title><rect x="443.3" y="74.0" width="91.0" height="26"/><text x="488.8" y="87.0">&lt;оператор&gt;</text></g>
+<g class="node terminal" data-id="4" data-start="102" data-end="104"><title>лексема if
+4:3-4:5: if</title><rect x="82.5" y="132.0" width="32.6" height="26"/><text x="98.8" y="145.0">if</text></g>
+<g class="node nonterminal" data-id="5" data-start="105" data-end="110"><title>&lt;умова&gt; ::= &lt;вираз&gt; &gt; &lt;вираз&gt;
+4:6-4:11: X &gt; Y</title><rect x="195.9" y="132.0" width="69.1" height="26"/><text x="230.5" y="145.0">&lt;умова&gt;</text></g>
+<g class="node nonterminal" data-id="6" data-start="105" data-end="106"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+4:6-4:7: X</title><rect x="130.8" y="190.0" width="69.1" height="26"/><text x="165.3" y="203.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="7" data-start="105" data-end="106"><title>&lt;змінна&gt; ::= X
+4:6-4:7: X</title><rect x="127.1" y="248.0" width="76.4" height="26"/><text x="165.3" y="261.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="8" data-start="105" data-end="106"><title>лексема IDENT
+4:6-4:7: X</title><rect x="150.3" y="306.0" width="30.0" height="26"/><text x="165.3" y="319.0">X</text></g>
+<g class="node terminal" data-id="9" data-start="107" data-end="108"><title>лексема &gt;
+4:8-4:9: &gt;</title><rect x="215.5" y="190.0" width="30.0" height="26"/><text x="230.5" y="203.0">&gt;</text></g>
+<g class="node nonterminal" data-id="10" data-start="109" data-end="110"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+4:10-4:11: Y</title><rect x="261.1" y="190.0" width="69.1" height="26"/><text x="295.7" y="203.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="11" data-start="109" data-end="110"><title>&lt;змінна&gt; ::= Y
+4:10-4:11: Y</title><rect x="257.5" y="248.0" width="76.4" height="26"/><text x="295.7" y="261.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="12" data-start="109" data-end="110"><title>лексема IDENT
+4:10-4:11: Y</title><rect x="280.7" y="306.0" width="30.0" height="26"/><text x="295.7" y="319.0">Y</text></g>
+<g class="node terminal" data-id="13" data-start="111" data-end="115"><title>лексема then
+4:12-4:16: then</title><rect x="345.9" y="132.0" width="47.2" height="26"/><text x="369.5" y="145.0">then</text></g>
+<g class="node nonterminal" data-id="14" data-start="120" data-end="126"><title>&lt;оператор&gt; ::= &lt;змінна&gt; := &lt;вираз&gt;
+5:5-5:11: M := X</title><rect x="464.3" y="132.0" width="91.0" height="26"/><text x="509.8" y="145.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="15" data-start="120" data-end="121"><title>&lt;змінна&gt; ::= M
+5:5-5:6: M</title><rect x="405.1" y="190.0" width="76.4" height="26"/><text x="443.3" y="203.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="16" data-start="120" data-end="121"><title>лексема IDENT
+5:5-5:6: M</title><rect x="428.3" y="248.0" width="30.0" height="26"/><text x="443.3" y="261.0">M</text></g>
+<g class="node terminal" data-id="17" data-start="122" data-end="124"><title>лексема :=
+5:7-5:9: :=</title><rect x="493.5" y="190.0" width="32.6" height="26"/><text x="509.8" y="203.0">:=</text></g>
+<g class="node nonterminal" data-id="18" data-start="125" data-end="126"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+5:10-5:11: X</title><rect x="541.8" y="190.0" width="69.1" height="26"/><text x="576.3" y="203.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="19" data-start="125" data-end="126"><title>&lt;змінна&gt; ::= X
+5:10-5:11: X</title><rect x="538.1" y="248.0" width="76.4" height="26"/><text x="576.3" y="261.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="20" data-start="125" data-end="126"><title>лексема IDENT
+5:10-5:11: X</title><rect x="561.3" y="306.0" width="30.0" height="26"/><text x="576.3" y="319.0">X</text></g>
+<g class="node terminal" data-id="21" data-start="129" data-end="133"><title>лексема else
+6:3-6:7: else</title><rect x="626.5" y="132.0" width="47.2" height="26"/><text x="650.1" y="145.0">else</text></g>
+<g class="node nonterminal" data-id="22" data-start="138" data-end="144"><title>&lt;оператор&gt; ::= &lt;змінна&gt; := &lt;вираз&gt;
+7:5-7:11: M := Y</title><rect x="744.9" y="132.0" width="91.0" height="26"/><text x="790.4" y="145.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="23" data-start="138" data-end="139"><title>&lt;змінна&gt; ::= M
+7:5-7:6: M</title><rect x="685.7" y="190.0" width="76.4" height="26"/><text x="723.9" y="203.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="24" data-start="138" data-end="139"><title>лексема IDENT
+7:5-7:6: M</title><rect x="708.9" y="248.0" width="30.0" height="26"/><text x="723.9" y="261.0">M</text></g>
+<g class="node terminal" data-id="25" data-start="140" data-end="142"><title>лексема :=
+7:7-7:9: :=</title><rect x="774.1" y="190.0" width="32.6" height="26"/><text x="790.4" y="203.0">:=</text></g>
+<g class="node nonterminal" data-id="26" data-start="143" data-end="144"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+7:10-7:11: Y</title><rect x="822.4" y="190.0" width="69.1" height="26"/><text x="856.9" y="203.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="27" data-start="143" data-end="144"><title>&lt;змінна&gt; ::= Y
+7:10-7:11: Y</title><rect x="818.7" y="248.0" width="76.4" height="26"/><text x="856.9" y="261.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="28" data-start="143" data-end="144"><title>лексема IDENT
+7:10-7:11: Y</title><rect x="841.9" y="306.0" width="30.0" height="26"/><text x="856.9" y="319.0">Y</text></g>
+<g class="node terminal" data-id="29" data-start="145" data-end="148"><title>лексема end
+8:1-8:4: end</title><rect x="907.1" y="74.0" width="39.9" height="26"/><text x="927.1" y="87.0">end</text></g>
+</svg></div></section><section><h2>Абстрактне синтаксичне дерево (AST)</h2><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" class="sipl-tree" data-tree="t1" width="272" height="232" viewBox="0 0 272 232">
+<line x1="136.0" y1="42.0" x2="136.0" y2="74.0"/>
+<line x1="136.0" y1="100.0" x2="52.0" y2="132.0"/>
+<line x1="136.0" y1="100.0" x2="136.0" y2="132.0"/>
+<line x1="136.0" y1="100.0" x2="220.0" y2="132.0"/>
+<line x1="52.0" y1="158.0" x2="31.0" y2="190.0"/>
+<line x1="52.0" y1="158.0" x2="73.0" y2="190.0"/>
+<line x1="136.0" y1="158.0" x2="115.0" y2="190.0"/>
+<line x1="136.0" y1="158.0" x2="157.0" y2="190.0"/>
+<line x1="220.0" y1="158.0" x2="199.0" y2="190.0"/>
+<line x1="220.0" y1="158.0" x2="241.0" y2="190.0"/>
+<g class="node program" data-id="1" data-start="94" data-end="148"><title>Program
+3:1-8:4: begin if X &gt; Y then M := X else M := Y end</title><rect x="101.5" y="16.0" width="69.1" height="26"/><text x="136.0" y="29.0">Program</text></g>
+<g class="node statement" data-id="2" data-start="102" data-end="144"><title>If
+4:3-7:11: if X &gt; Y then M := X else M := Y</title><rect x="119.7" y="74.0" width="32.6" height="26"/><text x="136.0" y="87.0">if</text></g>
+<g class="node condition" data-id="3" data-start="105" data-end="110"><title>Compare
+4:6-4:11: X &gt; Y</title><rect x="37.0" y="132.0" width="30.0" height="26"/><text x="52.0" y="145.0">&gt;</text></g>
+<g class="node expression" data-id="4" data-start="105" data-end="106"><title>Var
+4:6-4:7: X</title><rect x="16.0" y="190.0" width="30.0" height="26"/><text x="31.0" y="203.0">X</text></g>
+<g class="node expression" data-id="5" data-start="109" data-end="110"><title>Var
+4:10-4:11: Y</title><rect x="58.0" y="190.0" width="30.0" height="26"/><text x="73.0" y="203.0">Y</text></g>
+<g class="node statement" data-id="6" data-start="120" data-end="126"><title>Assign
+5:5-5:11: M := X</title><rect x="119.7" y="132.0" width="32.6" height="26"/><text x="136.0" y="145.0">:=</text></g>
+<g class="node expression" data-id="7" data-start="120" data-end="121"><title>Var
+5:5-5:6: M</title><rect x="100.0" y="190.0" width="30.0" height="26"/><text x="115.0" y="203.0">M</text></g>
+<g class="node expression" data-id="8" data-start="125" data-end="126"><title>Var
+5:10-5:11: X</title><rect x="142.0" y="190.0" width="30.0" height="26"/><text x="157.0" y="203.0">X</text></g>
+<g class="node statement" data-id="9" data-start="138" data-end="144"><title>Assign
+7:5-7:11: M := Y</title><rect x="203.7" y="132.0" width="32.6" height="26"/><text x="220.0" y="145.0">:=</text></g>
+<g class="node expression" data-id="10" data-start="138" data-end="139"><title>Var
+7:5-7:6: M</title><rect x="184.0" y="190.0" width="30.0" height="26"/><text x="199.0" y="203.0">M</text></g>
+<g class="node expression" data-id="11" data-start="143" data-end="144"><title>Var
+7:10-7:11: Y</title><rect x="226.0" y="190.0" width="30.0" height="26"/><text x="241.0" y="203.0">Y</text></g>
+</svg></div></section></div></main><script>
+const chars = document.querySelectorAll('#src span');
+const nodes = [...document.querySelectorAll('.sipl-tree .node')];
+const info = document.getElementById('info');
+let pinned = null;
+function show(start, end, origin) {
+  chars.forEach((c, i) => c.classList.toggle('hl', i >= start && i < end));
+  nodes.forEach(n => {
+    const same = +n.dataset.start === start && +n.dataset.end === end;
+    n.classList.toggle('sel', n === origin);
+    n.classList.toggle('match', same && n !== origin);
+  });
+  info.textContent = origin ? origin.querySelector('title').textContent : '';
+}
+function clear() { show(-1, -1, null); }
+function restore() { pinned ? show(+pinned.dataset.start, +pinned.dataset.end, pinned) : clear(); }
+nodes.forEach(n => {
+  n.addEventListener('mouseenter', () => show(+n.dataset.start, +n.dataset.end, n));
+  n.addEventListener('mouseleave', restore);
+  n.addEventListener('click', () => { pinned = pinned === n ? null : n; restore(); });
+});
+// клік по символу коду -> найменший вузол кожного дерева, що його містить
+chars.forEach((c, i) => c.addEventListener('click', () => {
+  let best = null;
+  for (const n of nodes) {
+    const s = +n.dataset.start, e = +n.dataset.end;
+    if (s <= i && i < e && (!best || e - s <= best.dataset.end - best.dataset.start)) best = n;
+  }
+  pinned = best; restore();
+  if (best) best.scrollIntoView({block: 'nearest', inline: 'center', behavior: 'smooth'});
+}));
+</script></body></html>
+

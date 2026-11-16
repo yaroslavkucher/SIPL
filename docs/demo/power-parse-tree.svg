@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="sipl-tree" data-tree="tree" width="1574" height="580" viewBox="0 0 1574 580">
+<style>
+.sipl-tree text{font:12px Consolas,'DejaVu Sans Mono',monospace;text-anchor:middle;
+dominant-baseline:central;fill:#1c2333;pointer-events:none}
+.sipl-tree line{stroke:#8a93a6;stroke-width:1.2}
+.sipl-tree rect{stroke:#5b6785;stroke-width:1;rx:6}
+.sipl-tree .nonterminal rect,.sipl-tree .statement rect{fill:#e8eefc}
+.sipl-tree .terminal rect,.sipl-tree .expression rect{fill:#fff4d6}
+.sipl-tree .condition rect{fill:#fbe3e6}
+.sipl-tree .program rect{fill:#dcefe2}
+.sipl-tree .node{cursor:pointer}
+.sipl-tree .node.match rect{stroke:#c2410c;stroke-width:2.5}
+.sipl-tree .node.sel rect{stroke:#c2410c;stroke-width:3;fill:#fed7aa}
+</style>
+<rect width="1574" height="580" style="fill:#ffffff;stroke:none"/>
+<line x1="786.9" y1="42.0" x2="43.2" y2="74.0"/>
+<line x1="786.9" y1="42.0" x2="794.2" y2="74.0"/>
+<line x1="786.9" y1="42.0" x2="1537.8" y2="74.0"/>
+<line x1="794.2" y1="100.0" x2="183.6" y2="132.0"/>
+<line x1="794.2" y1="100.0" x2="311.6" y2="132.0"/>
+<line x1="794.2" y1="100.0" x2="922.2" y2="132.0"/>
+<line x1="183.6" y1="158.0" x2="120.7" y2="190.0"/>
+<line x1="183.6" y1="158.0" x2="187.2" y2="190.0"/>
+<line x1="183.6" y1="158.0" x2="250.1" y2="190.0"/>
+<line x1="120.7" y1="216.0" x2="120.7" y2="248.0"/>
+<line x1="250.1" y1="216.0" x2="250.1" y2="248.0"/>
+<line x1="250.1" y1="274.0" x2="250.1" y2="306.0"/>
+<line x1="922.2" y1="158.0" x2="365.9" y2="190.0"/>
+<line x1="922.2" y1="158.0" x2="504.9" y2="190.0"/>
+<line x1="922.2" y1="158.0" x2="632.9" y2="190.0"/>
+<line x1="922.2" y1="158.0" x2="1083.5" y2="190.0"/>
+<line x1="504.9" y1="216.0" x2="443.3" y2="248.0"/>
+<line x1="504.9" y1="216.0" x2="508.5" y2="248.0"/>
+<line x1="504.9" y1="216.0" x2="570.0" y2="248.0"/>
+<line x1="443.3" y1="274.0" x2="443.3" y2="306.0"/>
+<line x1="443.3" y1="332.0" x2="443.3" y2="364.0"/>
+<line x1="570.0" y1="274.0" x2="570.0" y2="306.0"/>
+<line x1="570.0" y1="332.0" x2="570.0" y2="364.0"/>
+<line x1="1083.5" y1="216.0" x2="688.5" y2="248.0"/>
+<line x1="1083.5" y1="216.0" x2="1090.8" y2="248.0"/>
+<line x1="1083.5" y1="216.0" x2="1486.0" y2="248.0"/>
+<line x1="1090.8" y1="274.0" x2="897.6" y2="306.0"/>
+<line x1="1090.8" y1="274.0" x2="1094.5" y2="306.0"/>
+<line x1="1090.8" y1="274.0" x2="1287.8" y2="306.0"/>
+<line x1="897.6" y1="332.0" x2="765.9" y2="364.0"/>
+<line x1="897.6" y1="332.0" x2="832.4" y2="364.0"/>
+<line x1="897.6" y1="332.0" x2="964.1" y2="364.0"/>
+<line x1="765.9" y1="390.0" x2="765.9" y2="422.0"/>
+<line x1="964.1" y1="390.0" x2="898.9" y2="422.0"/>
+<line x1="964.1" y1="390.0" x2="964.1" y2="422.0"/>
+<line x1="964.1" y1="390.0" x2="1029.3" y2="422.0"/>
+<line x1="898.9" y1="448.0" x2="898.9" y2="480.0"/>
+<line x1="898.9" y1="506.0" x2="898.9" y2="538.0"/>
+<line x1="1029.3" y1="448.0" x2="1029.3" y2="480.0"/>
+<line x1="1029.3" y1="506.0" x2="1029.3" y2="538.0"/>
+<line x1="1287.8" y1="332.0" x2="1159.7" y2="364.0"/>
+<line x1="1287.8" y1="332.0" x2="1226.2" y2="364.0"/>
+<line x1="1287.8" y1="332.0" x2="1354.2" y2="364.0"/>
+<line x1="1159.7" y1="390.0" x2="1159.7" y2="422.0"/>
+<line x1="1354.2" y1="390.0" x2="1292.7" y2="422.0"/>
+<line x1="1354.2" y1="390.0" x2="1357.9" y2="422.0"/>
+<line x1="1354.2" y1="390.0" x2="1419.5" y2="422.0"/>
+<line x1="1292.7" y1="448.0" x2="1292.7" y2="480.0"/>
+<line x1="1292.7" y1="506.0" x2="1292.7" y2="538.0"/>
+<line x1="1419.5" y1="448.0" x2="1419.5" y2="480.0"/>
+<line x1="1419.5" y1="506.0" x2="1419.5" y2="538.0"/>
+<g class="node nonterminal" data-id="1" data-start="90" data-end="224"><title>&lt;програма&gt; ::= begin &lt;оператор&gt; end
+4:1-13:4: begin R := 1; //@ inv: R * X^Y = A^B and Y &gt;= 0 //@ variant…</title><rect x="741.4" y="16.0" width="91.0" height="26"/><text x="786.9" y="29.0">&lt;програма&gt;</text></g>
+<g class="node terminal" data-id="2" data-start="90" data-end="95"><title>лексема begin
+4:1-4:6: begin</title><rect x="16.0" y="74.0" width="54.5" height="26"/><text x="43.2" y="87.0">begin</text></g>
+<g class="node nonterminal" data-id="3" data-start="98" data-end="220"><title>&lt;оператор&gt; ::= &lt;оператор&gt; ; &lt;оператор&gt;
+5:3-12:6: R := 1; //@ inv: R * X^Y = A^B and Y &gt;= 0 //@ variant: Y wh…</title><rect x="748.7" y="74.0" width="91.0" height="26"/><text x="794.2" y="87.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="4" data-start="98" data-end="104"><title>&lt;оператор&gt; ::= &lt;змінна&gt; := &lt;вираз&gt;
+5:3-5:9: R := 1</title><rect x="138.1" y="132.0" width="91.0" height="26"/><text x="183.6" y="145.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="5" data-start="98" data-end="99"><title>&lt;змінна&gt; ::= R
+5:3-5:4: R</title><rect x="82.5" y="190.0" width="76.4" height="26"/><text x="120.7" y="203.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="6" data-start="98" data-end="99"><title>лексема IDENT
+5:3-5:4: R</title><rect x="105.7" y="248.0" width="30.0" height="26"/><text x="120.7" y="261.0">R</text></g>
+<g class="node terminal" data-id="7" data-start="100" data-end="102"><title>лексема :=
+5:5-5:7: :=</title><rect x="170.9" y="190.0" width="32.6" height="26"/><text x="187.2" y="203.0">:=</text></g>
+<g class="node nonterminal" data-id="8" data-start="103" data-end="104"><title>&lt;вираз&gt; ::= &lt;число&gt;
+5:8-5:9: 1</title><rect x="215.5" y="190.0" width="69.1" height="26"/><text x="250.1" y="203.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="9" data-start="103" data-end="104"><title>&lt;число&gt; ::= 1
+5:8-5:9: 1</title><rect x="215.5" y="248.0" width="69.1" height="26"/><text x="250.1" y="261.0">&lt;число&gt;</text></g>
+<g class="node terminal" data-id="10" data-start="103" data-end="104"><title>лексема NUMBER
+5:8-5:9: 1</title><rect x="235.1" y="306.0" width="30.0" height="26"/><text x="250.1" y="319.0">1</text></g>
+<g class="node terminal" data-id="11" data-start="104" data-end="105"><title>лексема ;
+5:9-5:10: ;</title><rect x="296.6" y="132.0" width="30.0" height="26"/><text x="311.6" y="145.0">;</text></g>
+<g class="node nonterminal" data-id="12" data-start="161" data-end="220"><title>&lt;оператор&gt; ::= while &lt;умова&gt; do &lt;оператор&gt;
+8:3-12:6: while Y &gt; 0 do begin R := R * X; Y := Y - 1 end</title><rect x="876.8" y="132.0" width="91.0" height="26"/><text x="922.2" y="145.0">&lt;оператор&gt;</text></g>
+<g class="node terminal" data-id="13" data-start="161" data-end="166"><title>лексема while
+8:3-8:8: while</title><rect x="338.6" y="190.0" width="54.5" height="26"/><text x="365.9" y="203.0">while</text></g>
+<g class="node nonterminal" data-id="14" data-start="167" data-end="172"><title>&lt;умова&gt; ::= &lt;вираз&gt; &gt; &lt;вираз&gt;
+8:9-8:14: Y &gt; 0</title><rect x="470.3" y="190.0" width="69.1" height="26"/><text x="504.9" y="203.0">&lt;умова&gt;</text></g>
+<g class="node nonterminal" data-id="15" data-start="167" data-end="168"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+8:9-8:10: Y</title><rect x="408.8" y="248.0" width="69.1" height="26"/><text x="443.3" y="261.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="16" data-start="167" data-end="168"><title>&lt;змінна&gt; ::= Y
+8:9-8:10: Y</title><rect x="405.1" y="306.0" width="76.4" height="26"/><text x="443.3" y="319.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="17" data-start="167" data-end="168"><title>лексема IDENT
+8:9-8:10: Y</title><rect x="428.3" y="364.0" width="30.0" height="26"/><text x="443.3" y="377.0">Y</text></g>
+<g class="node terminal" data-id="18" data-start="169" data-end="170"><title>лексема &gt;
+8:11-8:12: &gt;</title><rect x="493.5" y="248.0" width="30.0" height="26"/><text x="508.5" y="261.0">&gt;</text></g>
+<g class="node nonterminal" data-id="19" data-start="171" data-end="172"><title>&lt;вираз&gt; ::= &lt;число&gt;
+8:13-8:14: 0</title><rect x="535.5" y="248.0" width="69.1" height="26"/><text x="570.0" y="261.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="20" data-start="171" data-end="172"><title>&lt;число&gt; ::= 0
+8:13-8:14: 0</title><rect x="535.5" y="306.0" width="69.1" height="26"/><text x="570.0" y="319.0">&lt;число&gt;</text></g>
+<g class="node terminal" data-id="21" data-start="171" data-end="172"><title>лексема NUMBER
+8:13-8:14: 0</title><rect x="555.0" y="364.0" width="30.0" height="26"/><text x="570.0" y="377.0">0</text></g>
+<g class="node terminal" data-id="22" data-start="173" data-end="175"><title>лексема do
+8:15-8:17: do</title><rect x="616.6" y="190.0" width="32.6" height="26"/><text x="632.9" y="203.0">do</text></g>
+<g class="node nonterminal" data-id="23" data-start="178" data-end="220"><title>&lt;оператор&gt; ::= begin &lt;оператор&gt; end
+9:3-12:6: begin R := R * X; Y := Y - 1 end</title><rect x="1038.0" y="190.0" width="91.0" height="26"/><text x="1083.5" y="203.0">&lt;оператор&gt;</text></g>
+<g class="node terminal" data-id="24" data-start="178" data-end="183"><title>лексема begin
+9:3-9:8: begin</title><rect x="661.2" y="248.0" width="54.5" height="26"/><text x="688.5" y="261.0">begin</text></g>
+<g class="node nonterminal" data-id="25" data-start="188" data-end="214"><title>&lt;оператор&gt; ::= &lt;оператор&gt; ; &lt;оператор&gt;
+10:5-11:15: R := R * X; Y := Y - 1</title><rect x="1045.3" y="248.0" width="91.0" height="26"/><text x="1090.8" y="261.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="26" data-start="188" data-end="198"><title>&lt;оператор&gt; ::= &lt;змінна&gt; := &lt;вираз&gt;
+10:5-10:15: R := R * X</title><rect x="852.1" y="306.0" width="91.0" height="26"/><text x="897.6" y="319.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="27" data-start="188" data-end="189"><title>&lt;змінна&gt; ::= R
+10:5-10:6: R</title><rect x="727.7" y="364.0" width="76.4" height="26"/><text x="765.9" y="377.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="28" data-start="188" data-end="189"><title>лексема IDENT
+10:5-10:6: R</title><rect x="750.9" y="422.0" width="30.0" height="26"/><text x="765.9" y="435.0">R</text></g>
+<g class="node terminal" data-id="29" data-start="190" data-end="192"><title>лексема :=
+10:7-10:9: :=</title><rect x="816.1" y="364.0" width="32.6" height="26"/><text x="832.4" y="377.0">:=</text></g>
+<g class="node nonterminal" data-id="30" data-start="193" data-end="198"><title>&lt;вираз&gt; ::= &lt;вираз&gt; * &lt;вираз&gt;
+10:10-10:15: R * X</title><rect x="929.6" y="364.0" width="69.1" height="26"/><text x="964.1" y="377.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="31" data-start="193" data-end="194"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+10:10-10:11: R</title><rect x="864.4" y="422.0" width="69.1" height="26"/><text x="898.9" y="435.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="32" data-start="193" data-end="194"><title>&lt;змінна&gt; ::= R
+10:10-10:11: R</title><rect x="860.7" y="480.0" width="76.4" height="26"/><text x="898.9" y="493.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="33" data-start="193" data-end="194"><title>лексема IDENT
+10:10-10:11: R</title><rect x="883.9" y="538.0" width="30.0" height="26"/><text x="898.9" y="551.0">R</text></g>
+<g class="node terminal" data-id="34" data-start="195" data-end="196"><title>лексема *
+10:12-10:13: *</title><rect x="949.1" y="422.0" width="30.0" height="26"/><text x="964.1" y="435.0">*</text></g>
+<g class="node nonterminal" data-id="35" data-start="197" data-end="198"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+10:14-10:15: X</title><rect x="994.8" y="422.0" width="69.1" height="26"/><text x="1029.3" y="435.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="36" data-start="197" data-end="198"><title>&lt;змінна&gt; ::= X
+10:14-10:15: X</title><rect x="991.1" y="480.0" width="76.4" height="26"/><text x="1029.3" y="493.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="37" data-start="197" data-end="198"><title>лексема IDENT
+10:14-10:15: X</title><rect x="1014.3" y="538.0" width="30.0" height="26"/><text x="1029.3" y="551.0">X</text></g>
+<g class="node terminal" data-id="38" data-start="198" data-end="199"><title>лексема ;
+10:15-10:16: ;</title><rect x="1079.5" y="306.0" width="30.0" height="26"/><text x="1094.5" y="319.0">;</text></g>
+<g class="node nonterminal" data-id="39" data-start="204" data-end="214"><title>&lt;оператор&gt; ::= &lt;змінна&gt; := &lt;вираз&gt;
+11:5-11:15: Y := Y - 1</title><rect x="1242.2" y="306.0" width="91.0" height="26"/><text x="1287.8" y="319.0">&lt;оператор&gt;</text></g>
+<g class="node nonterminal" data-id="40" data-start="204" data-end="205"><title>&lt;змінна&gt; ::= Y
+11:5-11:6: Y</title><rect x="1121.5" y="364.0" width="76.4" height="26"/><text x="1159.7" y="377.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="41" data-start="204" data-end="205"><title>лексема IDENT
+11:5-11:6: Y</title><rect x="1144.7" y="422.0" width="30.0" height="26"/><text x="1159.7" y="435.0">Y</text></g>
+<g class="node terminal" data-id="42" data-start="206" data-end="208"><title>лексема :=
+11:7-11:9: :=</title><rect x="1209.9" y="364.0" width="32.6" height="26"/><text x="1226.2" y="377.0">:=</text></g>
+<g class="node nonterminal" data-id="43" data-start="209" data-end="214"><title>&lt;вираз&gt; ::= &lt;вираз&gt; - &lt;вираз&gt;
+11:10-11:15: Y - 1</title><rect x="1319.7" y="364.0" width="69.1" height="26"/><text x="1354.2" y="377.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="44" data-start="209" data-end="210"><title>&lt;вираз&gt; ::= &lt;змінна&gt;
+11:10-11:11: Y</title><rect x="1258.2" y="422.0" width="69.1" height="26"/><text x="1292.7" y="435.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="45" data-start="209" data-end="210"><title>&lt;змінна&gt; ::= Y
+11:10-11:11: Y</title><rect x="1254.5" y="480.0" width="76.4" height="26"/><text x="1292.7" y="493.0">&lt;змінна&gt;</text></g>
+<g class="node terminal" data-id="46" data-start="209" data-end="210"><title>лексема IDENT
+11:10-11:11: Y</title><rect x="1277.7" y="538.0" width="30.0" height="26"/><text x="1292.7" y="551.0">Y</text></g>
+<g class="node terminal" data-id="47" data-start="211" data-end="212"><title>лексема -
+11:12-11:13: -</title><rect x="1342.9" y="422.0" width="30.0" height="26"/><text x="1357.9" y="435.0">-</text></g>
+<g class="node nonterminal" data-id="48" data-start="213" data-end="214"><title>&lt;вираз&gt; ::= &lt;число&gt;
+11:14-11:15: 1</title><rect x="1384.9" y="422.0" width="69.1" height="26"/><text x="1419.5" y="435.0">&lt;вираз&gt;</text></g>
+<g class="node nonterminal" data-id="49" data-start="213" data-end="214"><title>&lt;число&gt; ::= 1
+11:14-11:15: 1</title><rect x="1384.9" y="480.0" width="69.1" height="26"/><text x="1419.5" y="493.0">&lt;число&gt;</text></g>
+<g class="node terminal" data-id="50" data-start="213" data-end="214"><title>лексема NUMBER
+11:14-11:15: 1</title><rect x="1404.5" y="538.0" width="30.0" height="26"/><text x="1419.5" y="551.0">1</text></g>
+<g class="node terminal" data-id="51" data-start="217" data-end="220"><title>лексема end
+12:3-12:6: end</title><rect x="1466.0" y="248.0" width="39.9" height="26"/><text x="1486.0" y="261.0">end</text></g>
+<g class="node terminal" data-id="52" data-start="221" data-end="224"><title>лексема end
+13:1-13:4: end</title><rect x="1517.9" y="74.0" width="39.9" height="26"/><text x="1537.8" y="87.0">end</text></g>
+</svg>

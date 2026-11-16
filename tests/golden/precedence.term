@@ -1,0 +1,8 @@
+AS^A(S^2(sub, S^2(add, const(1), S^2(mult, const(2), const(3))), const(4))) *
+AS^B(S^2(mult, S^2(add, const(1), const(2)), S^2(sub, const(3), const(4)))) *
+AS^C(S^2(sub, S^2(sub, const(10), const(3)), const(2))) *
+IF(
+  S^2(or, S^1(neg, S^2(gr, A=>, B=>)), S^2(or, S^2(eq, B=>, C=>), S^1(neg, S^2(gr, C=>, const(0))))),
+  id,
+  AS^C(const(-5))
+)

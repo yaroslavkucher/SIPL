@@ -1,0 +1,4 @@
+WH(
+  S^2(gr, X=>, const(0)),
+  AS^X(S^2(add, X=>, const(1)))
+)

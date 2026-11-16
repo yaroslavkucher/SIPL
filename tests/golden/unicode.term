@@ -1,0 +1,5 @@
+IF(
+  S^2(or, S^1(neg, S^2(gr, X=>, const(0))), S^2(eq, Y=>, const(-1))),
+  AS^Z(S^2(mult, S^2(mult, S^2(add, X=>, const(1)), S^2(sub, Y=>, const(2))), const(3))),
+  id
+)

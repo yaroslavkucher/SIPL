@@ -1,0 +1,7 @@
+AS^S(const(0)) *
+AS^I(const(0)) *
+WH(
+  S^2(gr, N=>, I=>),
+  AS^I(S^2(add, I=>, const(1))) *
+  AS^S(S^2(add, S=>, I=>))
+)

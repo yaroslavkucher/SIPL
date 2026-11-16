@@ -1,0 +1,6 @@
+AS^R(const(0)) *
+WH(
+  S^2(gr, Y=>, const(0)),
+  AS^R(S^2(add, R=>, X=>)) *
+  AS^Y(S^2(sub, Y=>, const(1)))
+)

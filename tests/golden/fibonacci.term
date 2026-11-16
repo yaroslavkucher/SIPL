@@ -1,0 +1,9 @@
+AS^A(const(0)) *
+AS^B(const(1)) *
+WH(
+  S^2(gr, N=>, const(0)),
+  AS^T(S^2(add, A=>, B=>)) *
+  AS^A(B=>) *
+  AS^B(T=>) *
+  AS^N(S^2(sub, N=>, const(1)))
+)

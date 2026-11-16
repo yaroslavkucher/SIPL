@@ -1,0 +1,12 @@
+AS^P(const(0)) *
+AS^I(const(0)) *
+WH(
+  S^2(gr, A=>, I=>),
+  AS^J(const(0)) *
+  WH(
+    S^2(gr, B=>, J=>),
+    AS^P(S^2(add, P=>, const(1))) *
+    AS^J(S^2(add, J=>, const(1)))
+  ) *
+  AS^I(S^2(add, I=>, const(1)))
+)

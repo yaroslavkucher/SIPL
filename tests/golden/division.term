@@ -1,0 +1,7 @@
+AS^Q(const(0)) *
+AS^R(A=>) *
+WH(
+  S^2(or, S^2(gr, R=>, B=>), S^2(eq, R=>, B=>)),
+  AS^R(S^2(sub, R=>, B=>)) *
+  AS^Q(S^2(add, Q=>, const(1)))
+)

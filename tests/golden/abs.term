@@ -1,0 +1,5 @@
+IF(
+  S^2(gr, X=>, const(0)),
+  AS^R(X=>),
+  AS^R(S^2(sub, const(0), X=>))
+)
